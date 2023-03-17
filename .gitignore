@@ -1,0 +1,11 @@
+*
+
+!docs/
+!docs/*
+
+!docs/_images/
+!docs/_images/*
+
+!docs/_static/
+!docs/_static/*
+!docs/_static/*/*
