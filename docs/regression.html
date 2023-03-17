@@ -54,8 +54,9 @@
 <li class="toctree-l4"><a class="reference internal" href="theory_overview.html#conformalized-quantile-regression-cqr">Conformalized Quantile Regression (CQR)</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#cross-validation-cv">Cross-validation + (CV+)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#cross-validation-cv-jackknife">Cross-validation+ (CV+), Jackknife+</a></li>
 <li class="toctree-l3"><a class="reference internal" href="theory_overview.html#ensemble-batch-prediction-intervals-enbpi">Ensemble Batch Prediction Intervals (EnbPI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#summary-guarantees">Summary: guarantees</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="theory_overview.html#conformal-classification">Conformal Classification</a><ul>
@@ -82,38 +83,38 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">📈 Regression</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#deel.puncc.Regression.SplitCP"><code class="docutils literal notranslate"><span class="pre">SplitCP</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.Regression.SplitCP.fit"><code class="docutils literal notranslate"><span class="pre">SplitCP.fit()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.Regression.SplitCP.get_nonconformity_scores"><code class="docutils literal notranslate"><span class="pre">SplitCP.get_nonconformity_scores()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.Regression.SplitCP.predict"><code class="docutils literal notranslate"><span class="pre">SplitCP.predict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deel.puncc.regression.SplitCP"><code class="docutils literal notranslate"><span class="pre">SplitCP</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.regression.SplitCP.fit"><code class="docutils literal notranslate"><span class="pre">SplitCP.fit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.regression.SplitCP.get_nonconformity_scores"><code class="docutils literal notranslate"><span class="pre">SplitCP.get_nonconformity_scores()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.regression.SplitCP.predict"><code class="docutils literal notranslate"><span class="pre">SplitCP.predict()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#deel.puncc.Regression.LocallyAdaptiveCP"><code class="docutils literal notranslate"><span class="pre">LocallyAdaptiveCP</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.Regression.LocallyAdaptiveCP.fit"><code class="docutils literal notranslate"><span class="pre">LocallyAdaptiveCP.fit()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.Regression.LocallyAdaptiveCP.get_nonconformity_scores"><code class="docutils literal notranslate"><span class="pre">LocallyAdaptiveCP.get_nonconformity_scores()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.Regression.LocallyAdaptiveCP.predict"><code class="docutils literal notranslate"><span class="pre">LocallyAdaptiveCP.predict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deel.puncc.regression.LocallyAdaptiveCP"><code class="docutils literal notranslate"><span class="pre">LocallyAdaptiveCP</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.regression.LocallyAdaptiveCP.fit"><code class="docutils literal notranslate"><span class="pre">LocallyAdaptiveCP.fit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.regression.LocallyAdaptiveCP.get_nonconformity_scores"><code class="docutils literal notranslate"><span class="pre">LocallyAdaptiveCP.get_nonconformity_scores()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.regression.LocallyAdaptiveCP.predict"><code class="docutils literal notranslate"><span class="pre">LocallyAdaptiveCP.predict()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#deel.puncc.Regression.CQR"><code class="docutils literal notranslate"><span class="pre">CQR</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.Regression.CQR.fit"><code class="docutils literal notranslate"><span class="pre">CQR.fit()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.Regression.CQR.get_nonconformity_scores"><code class="docutils literal notranslate"><span class="pre">CQR.get_nonconformity_scores()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.Regression.CQR.predict"><code class="docutils literal notranslate"><span class="pre">CQR.predict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deel.puncc.regression.CQR"><code class="docutils literal notranslate"><span class="pre">CQR</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.regression.CQR.fit"><code class="docutils literal notranslate"><span class="pre">CQR.fit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.regression.CQR.get_nonconformity_scores"><code class="docutils literal notranslate"><span class="pre">CQR.get_nonconformity_scores()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.regression.CQR.predict"><code class="docutils literal notranslate"><span class="pre">CQR.predict()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#deel.puncc.Regression.CVPlus"><code class="docutils literal notranslate"><span class="pre">CVPlus</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.Regression.CVPlus.fit"><code class="docutils literal notranslate"><span class="pre">CVPlus.fit()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.Regression.CVPlus.get_nonconformity_scores"><code class="docutils literal notranslate"><span class="pre">CVPlus.get_nonconformity_scores()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.Regression.CVPlus.predict"><code class="docutils literal notranslate"><span class="pre">CVPlus.predict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deel.puncc.regression.CVPlus"><code class="docutils literal notranslate"><span class="pre">CVPlus</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.regression.CVPlus.fit"><code class="docutils literal notranslate"><span class="pre">CVPlus.fit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.regression.CVPlus.get_nonconformity_scores"><code class="docutils literal notranslate"><span class="pre">CVPlus.get_nonconformity_scores()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.regression.CVPlus.predict"><code class="docutils literal notranslate"><span class="pre">CVPlus.predict()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#deel.puncc.Regression.EnbPI"><code class="docutils literal notranslate"><span class="pre">EnbPI</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.Regression.EnbPI.fit"><code class="docutils literal notranslate"><span class="pre">EnbPI.fit()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.Regression.EnbPI.predict"><code class="docutils literal notranslate"><span class="pre">EnbPI.predict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deel.puncc.regression.EnbPI"><code class="docutils literal notranslate"><span class="pre">EnbPI</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.regression.EnbPI.fit"><code class="docutils literal notranslate"><span class="pre">EnbPI.fit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.regression.EnbPI.predict"><code class="docutils literal notranslate"><span class="pre">EnbPI.predict()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#deel.puncc.Regression.AdaptiveEnbPI"><code class="docutils literal notranslate"><span class="pre">AdaptiveEnbPI</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.Regression.AdaptiveEnbPI.fit"><code class="docutils literal notranslate"><span class="pre">AdaptiveEnbPI.fit()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.Regression.AdaptiveEnbPI.predict"><code class="docutils literal notranslate"><span class="pre">AdaptiveEnbPI.predict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deel.puncc.regression.AdaptiveEnbPI"><code class="docutils literal notranslate"><span class="pre">AdaptiveEnbPI</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.regression.AdaptiveEnbPI.fit"><code class="docutils literal notranslate"><span class="pre">AdaptiveEnbPI.fit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deel.puncc.regression.AdaptiveEnbPI.predict"><code class="docutils literal notranslate"><span class="pre">AdaptiveEnbPI.predict()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -236,8 +237,8 @@ implement the <code class="xref py py-func docutils literal notranslate"><span c
 <a class="reference internal" href="prediction.html"><span class="doc">Prediction module</span></a> from the <a class="reference internal" href="api.html"><span class="doc">API</span></a> ensures the
 compliance of models from various ML/DL libraries (such as Keras and scikit-learn) to <strong>puncc</strong>.</p>
 <dl class="py class">
-<dt class="sig sig-object py" id="deel.puncc.Regression.SplitCP">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deel.puncc.Regression.</span></span><span class="sig-name descname"><span class="pre">SplitCP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictor</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.SplitCP" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.SplitCP">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deel.puncc.regression.</span></span><span class="sig-name descname"><span class="pre">SplitCP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictor</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.SplitCP" title="Permalink to this definition"></a></dt>
 <dd><p>Split conformal prediction method. For more details, we refer the user to
 the <a class="reference internal" href="theory_overview.html#theory-splitcp"><span class="std std-ref">theory overview page</span></a>.</p>
 <dl class="field-list simple">
@@ -300,8 +301,8 @@ None.</p></li>
 </pre></div>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="deel.puncc.Regression.SplitCP.fit">
-<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_calib</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_calib</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.SplitCP.fit" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.SplitCP.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_calib</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_calib</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.SplitCP.fit" title="Permalink to this definition"></a></dt>
 <dd><p>This method fits the models to the fit data (X_fit, y_fit)
 and computes nonconformity scores on (X_calib, y_calib).</p>
 <dl class="field-list simple">
@@ -319,8 +320,8 @@ predict method.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="deel.puncc.Regression.SplitCP.get_nonconformity_scores">
-<span class="sig-name descname"><span class="pre">get_nonconformity_scores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.SplitCP.get_nonconformity_scores" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.SplitCP.get_nonconformity_scores">
+<span class="sig-name descname"><span class="pre">get_nonconformity_scores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.SplitCP.get_nonconformity_scores" title="Permalink to this definition"></a></dt>
 <dd><p>Get computed nonconformity scores.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -333,8 +334,8 @@ predict method.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="deel.puncc.Regression.SplitCP.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.SplitCP.predict" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.SplitCP.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.SplitCP.predict" title="Permalink to this definition"></a></dt>
 <dd><p>Conformal interval predictions (w.r.t target miscoverage alpha) for
 new samples.</p>
 <dl class="field-list simple">
@@ -356,8 +357,8 @@ new samples.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="deel.puncc.Regression.LocallyAdaptiveCP">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deel.puncc.Regression.</span></span><span class="sig-name descname"><span class="pre">LocallyAdaptiveCP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictor</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.LocallyAdaptiveCP" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.LocallyAdaptiveCP">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deel.puncc.regression.</span></span><span class="sig-name descname"><span class="pre">LocallyAdaptiveCP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictor</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.LocallyAdaptiveCP" title="Permalink to this definition"></a></dt>
 <dd><p>Locally adaptive conformal prediction method. For more details, we refer the user to
 the <a class="reference internal" href="theory_overview.html#theory-lacp"><span class="std std-ref">theory overview page</span></a></p>
 <dl class="field-list simple">
@@ -422,8 +423,8 @@ None.</p></li>
 </pre></div>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="deel.puncc.Regression.LocallyAdaptiveCP.fit">
-<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_calib</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_calib</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.LocallyAdaptiveCP.fit" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.LocallyAdaptiveCP.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_calib</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_calib</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.LocallyAdaptiveCP.fit" title="Permalink to this definition"></a></dt>
 <dd><p>This method fits the models to the fit data (X_fit, y_fit)
 and computes nonconformity scores on (X_calib, y_calib).</p>
 <dl class="field-list simple">
@@ -441,8 +442,8 @@ predict method.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="deel.puncc.Regression.LocallyAdaptiveCP.get_nonconformity_scores">
-<span class="sig-name descname"><span class="pre">get_nonconformity_scores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.LocallyAdaptiveCP.get_nonconformity_scores" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.LocallyAdaptiveCP.get_nonconformity_scores">
+<span class="sig-name descname"><span class="pre">get_nonconformity_scores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.LocallyAdaptiveCP.get_nonconformity_scores" title="Permalink to this definition"></a></dt>
 <dd><p>Get computed nonconformity scores.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -455,8 +456,8 @@ predict method.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="deel.puncc.Regression.LocallyAdaptiveCP.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.LocallyAdaptiveCP.predict" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.LocallyAdaptiveCP.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.LocallyAdaptiveCP.predict" title="Permalink to this definition"></a></dt>
 <dd><p>Conformal interval predictions (w.r.t target miscoverage alpha) for
 new samples.</p>
 <dl class="field-list simple">
@@ -478,8 +479,8 @@ new samples.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="deel.puncc.Regression.CQR">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deel.puncc.Regression.</span></span><span class="sig-name descname"><span class="pre">CQR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictor</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.CQR" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.CQR">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deel.puncc.regression.</span></span><span class="sig-name descname"><span class="pre">CQR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictor</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.CQR" title="Permalink to this definition"></a></dt>
 <dd><p>Conformalized quantile regression method. For more details, we refer the
 user to the <a class="reference internal" href="theory_overview.html#theory-cqr"><span class="std std-ref">theory overview page</span></a>.</p>
 <dl class="field-list simple">
@@ -551,8 +552,8 @@ None.</p></li>
 </pre></div>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="deel.puncc.Regression.CQR.fit">
-<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_calib</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_calib</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.CQR.fit" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.CQR.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_calib</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_calib</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.CQR.fit" title="Permalink to this definition"></a></dt>
 <dd><p>This method fits the models to the fit data (X_fit, y_fit)
 and computes nonconformity scores on (X_calib, y_calib).</p>
 <dl class="field-list simple">
@@ -570,8 +571,8 @@ predict method.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="deel.puncc.Regression.CQR.get_nonconformity_scores">
-<span class="sig-name descname"><span class="pre">get_nonconformity_scores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.CQR.get_nonconformity_scores" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.CQR.get_nonconformity_scores">
+<span class="sig-name descname"><span class="pre">get_nonconformity_scores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.CQR.get_nonconformity_scores" title="Permalink to this definition"></a></dt>
 <dd><p>Get computed nonconformity scores.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -584,8 +585,8 @@ predict method.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="deel.puncc.Regression.CQR.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.CQR.predict" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.CQR.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.CQR.predict" title="Permalink to this definition"></a></dt>
 <dd><p>Conformal interval predictions (w.r.t target miscoverage alpha) for
 new samples.</p>
 <dl class="field-list simple">
@@ -607,8 +608,8 @@ new samples.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="deel.puncc.Regression.CVPlus">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deel.puncc.Regression.</span></span><span class="sig-name descname"><span class="pre">CVPlus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictor</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.CVPlus" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.CVPlus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deel.puncc.regression.</span></span><span class="sig-name descname"><span class="pre">CVPlus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictor</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.CVPlus" title="Permalink to this definition"></a></dt>
 <dd><p>Cross-validation plus method. For more details, we refer the user to
 the <a class="reference internal" href="theory_overview.html#theory-cvplus"><span class="std std-ref">theory overview page</span></a>.</p>
 <dl class="field-list simple">
@@ -665,8 +666,8 @@ the <a class="reference internal" href="theory_overview.html#theory-cvplus"><spa
 </pre></div>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="deel.puncc.Regression.CVPlus.fit">
-<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.CVPlus.fit" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.CVPlus.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.CVPlus.fit" title="Permalink to this definition"></a></dt>
 <dd><p>This method fits the ensemble models based on the K-fold scheme.
 The out-of-bag folds are used to computes residuals on (X_calib, y_calib).</p>
 <dl class="field-list simple">
@@ -682,8 +683,8 @@ predict method.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="deel.puncc.Regression.CVPlus.get_nonconformity_scores">
-<span class="sig-name descname"><span class="pre">get_nonconformity_scores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.CVPlus.get_nonconformity_scores" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.CVPlus.get_nonconformity_scores">
+<span class="sig-name descname"><span class="pre">get_nonconformity_scores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.CVPlus.get_nonconformity_scores" title="Permalink to this definition"></a></dt>
 <dd><p>Get computed nonconformity scores per kfold.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -696,8 +697,8 @@ predict method.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="deel.puncc.Regression.CVPlus.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.CVPlus.predict" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.CVPlus.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.CVPlus.predict" title="Permalink to this definition"></a></dt>
 <dd><p>Conformal interval predictions (w.r.t target miscoverage alpha)
 for new samples.</p>
 <dl class="field-list simple">
@@ -719,8 +720,8 @@ for new samples.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="deel.puncc.Regression.EnbPI">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deel.puncc.Regression.</span></span><span class="sig-name descname"><span class="pre">EnbPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">agg_func_loo=&lt;function</span> <span class="pre">mean&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.EnbPI" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.EnbPI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deel.puncc.regression.</span></span><span class="sig-name descname"><span class="pre">EnbPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">agg_func_loo=&lt;function</span> <span class="pre">mean&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.EnbPI" title="Permalink to this definition"></a></dt>
 <dd><p>Ensemble batch prediction intervals method</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -796,8 +797,8 @@ for new samples.</p>
 </pre></div>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="deel.puncc.Regression.EnbPI.fit">
-<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.EnbPI.fit" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.EnbPI.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.EnbPI.fit" title="Permalink to this definition"></a></dt>
 <dd><p>Fit B bootstrap models on the bootstrap bags and respectively
 compute/store residuals on out-of-bag samples.</p>
 <dl class="field-list simple">
@@ -815,8 +816,8 @@ compute/store residuals on out-of-bag samples.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="deel.puncc.Regression.EnbPI.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_true</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.EnbPI.predict" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.EnbPI.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_true</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.EnbPI.predict" title="Permalink to this definition"></a></dt>
 <dd><p>Estimate conditional mean and interval prediction.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -842,8 +843,8 @@ residuals sequence.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="deel.puncc.Regression.AdaptiveEnbPI">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deel.puncc.Regression.</span></span><span class="sig-name descname"><span class="pre">AdaptiveEnbPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">agg_func_loo=&lt;function</span> <span class="pre">mean&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.AdaptiveEnbPI" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.AdaptiveEnbPI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deel.puncc.regression.</span></span><span class="sig-name descname"><span class="pre">AdaptiveEnbPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">agg_func_loo=&lt;function</span> <span class="pre">mean&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.AdaptiveEnbPI" title="Permalink to this definition"></a></dt>
 <dd><p>Locally adaptive version ensemble batch prediction intervals method.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -920,8 +921,8 @@ residuals sequence.</p></li>
 </pre></div>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="deel.puncc.Regression.AdaptiveEnbPI.fit">
-<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.AdaptiveEnbPI.fit" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.AdaptiveEnbPI.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.AdaptiveEnbPI.fit" title="Permalink to this definition"></a></dt>
 <dd><p>Fit B bootstrap models on the bootstrap bags and respectively
 compute/store residuals on out-of-bag samples.</p>
 <dl class="field-list simple">
@@ -939,8 +940,8 @@ compute/store residuals on out-of-bag samples.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="deel.puncc.Regression.AdaptiveEnbPI.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_true</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.Regression.AdaptiveEnbPI.predict" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="deel.puncc.regression.AdaptiveEnbPI.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_true</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.AdaptiveEnbPI.predict" title="Permalink to this definition"></a></dt>
 <dd><p>Estimate conditional mean and interval prediction.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
