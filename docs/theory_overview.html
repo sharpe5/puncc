@@ -248,7 +248,7 @@ underlying uncertainty that could stem from various sources or causes.</p>
 <h2>Conformal Prediction<a class="headerlink" href="#conformal-prediction" title="Permalink to this heading"></a></h2>
 <p>Conformal Prediction (CP) is a set of <em>distribution-free</em>, <em>model-agnostic</em> and
 <em>non-asymptotic</em> methods to estimate uncertainty by constructing <strong>valid</strong> <em>prediction sets</em>, i.e. with guaranteed probability of marginal coverage.</p>
-<p>Given a error rate (or significance level) <span class="math notranslate nohighlight">\(\alpha \in (0,1)\)</span>, set by the user, a set of exchangeable (or more simply i.i.d.)
+<p>Given an error rate (or significance level) <span class="math notranslate nohighlight">\(\alpha \in (0,1)\)</span>, set by the user, a set of exchangeable (or more simply i.i.d.)
 train data <span class="math notranslate nohighlight">\(\{ (X_i, Y_i) \}_{i=1}^{n}\)</span> and test point
 <span class="math notranslate nohighlight">\((X_{new}, Y_{new})\)</span> generated for a joint distribution <span class="math notranslate nohighlight">\(\mathbb{P}_{XY}\)</span>,
 a conformal prediction procedure builds prediction sets <span class="math notranslate nohighlight">\({C}_{\alpha}(\cdot)\)</span> so that:</p>
@@ -294,7 +294,7 @@ which produced several methods. Some of them are presented hereafter.</p>
 <p>where <span class="math notranslate nohighlight">\(\widehat{\sigma}(X_i)\)</span> is a measure of dispersion of the nonconformity scores at <span class="math notranslate nohighlight">\(X_i\)</span>.
 Usually, <span class="math notranslate nohighlight">\(\widehat{\sigma}\)</span> is trained to estimate the absolute prediction
 error <span class="math notranslate nohighlight">\(|\widehat{f}(X)-Y|\)</span> given <span class="math notranslate nohighlight">\(X=x\)</span>. The prediction interval is again
-centered on <span class="math notranslate nohighlight">\(\widehat{f}(X_{new})\)</span> but the margins are scaled w.r.t to the estimated local variability at <span class="math notranslate nohighlight">\(Y | X = X_{new}\)</span>:</p>
+centered on <span class="math notranslate nohighlight">\(\widehat{f}(X_{new})\)</span> but the margins are scaled w.r.t the estimated local variability at <span class="math notranslate nohighlight">\(Y | X = X_{new}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\widehat{C}_{\alpha}(X_{new})=
 \Big[ \widehat{f}(X_{new}) - \widehat{\sigma}(X_{new})\, \delta_{\alpha} \,,\, \widehat{f}(X_{new}) + \widehat{\sigma}(X_{new}) \, \delta_{\alpha} \Big].\]</div>

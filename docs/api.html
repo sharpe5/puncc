@@ -57,7 +57,6 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="theory_overview.html#cross-validation-cv-jackknife">Cross-validation+ (CV+), Jackknife+</a></li>
 <li class="toctree-l3"><a class="reference internal" href="theory_overview.html#ensemble-batch-prediction-intervals-enbpi">Ensemble Batch Prediction Intervals (EnbPI)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#summary-guarantees">Summary: guarantees</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="theory_overview.html#conformal-classification">Conformal Classification</a><ul>
@@ -361,7 +360,7 @@ An object instance is constructed by, as we will explain later, a <strong>predic
 </div>
 <p><code class="xref py py-class docutils literal notranslate"><span class="pre">deel.puncc.api.conformalization.ConformalPredictor</span></code> implements two methods:</p>
 <ul class="simple">
-<li><p>A <code class="xref py py-func docutils literal notranslate"><span class="pre">fit()</span></code> method that fits the predictor model and computes nonconformity scores accodingly to the calibrator and to the data split strategy provided by the splitter</p></li>
+<li><p>A <code class="xref py py-func docutils literal notranslate"><span class="pre">fit()</span></code> method that fits the predictor model and computes nonconformity scores accordingly to the calibrator and to the data split strategy provided by the splitter</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># X_train and y_train are the full training dataset</span>
 <span class="c1"># The splitter passed as argument to ConformalPredictor assigns data</span>
@@ -370,7 +369,7 @@ An object instance is constructed by, as we will explain later, a <strong>predic
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>And a <code class="xref py py-func docutils literal notranslate"><span class="pre">predict()</span></code> method that estimates for new samples the point predictions and prediction intervals [y_pred_lower, y_pred_upper], w.r.t a chosen error (significance) level <span class="math notranslate nohighlight">\(\\alpha\)</span></p></li>
+<li><p>And a <code class="xref py py-func docutils literal notranslate"><span class="pre">predict()</span></code> method that estimates for new samples the point predictions and prediction intervals [y_pred_lower, y_pred_upper], w.r.t a chosen error (significance) level <span class="math notranslate nohighlight">\(\alpha\)</span></p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Coverage target of 1-alpha = 90%</span>
 <span class="n">y_pred</span><span class="p">,</span> <span class="n">y_pred_lower</span><span class="p">,</span> <span class="n">y_pred_upper</span> <span class="o">=</span> <span class="n">conformal_predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_new</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.1</span><span class="p">)</span>
@@ -477,10 +476,10 @@ trains the first model on the data and the second one to predict the absolute er
 <p>These three predictor classes cover plenty of use case in conformal prediction.
 But if you have a special need, you can subclass <code class="xref py py-class docutils literal notranslate"><span class="pre">deel.puncc.api.prediction.BasePredictor</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">deel.puncc.api.prediction.DualPredictor</span></code> or
 even create a predictor from scratch.</p>
-<p>Here is a example of situation where you need to define your own predictor:
+<p>Here is an   example of situation where you need to define your own predictor:
 you have a classification problem and you build a <code class="xref py py-class docutils literal notranslate"><span class="pre">RandomForestClassifier</span></code>
 from sklearn. The procedure <a class="reference internal" href="theory_overview.html#theory-raps"><span class="std std-ref">RAPS</span></a> to conformalize the classifier requires
-a <code class="xref py py-func docutils literal notranslate"><span class="pre">predict()</span></code> method that outputs the estimated probabily of each class. This is not the case
+a <code class="xref py py-func docutils literal notranslate"><span class="pre">predict()</span></code> method that outputs the estimated probability of each class. This is not the case
 as <code class="xref py py-func docutils literal notranslate"><span class="pre">RandomForestClassifier.predict()</span></code> returns only the most likely class. In this case,
 we need to create a predictor in which we redefine the <code class="xref py py-func docutils literal notranslate"><span class="pre">predict()</span></code> call:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
@@ -511,7 +510,7 @@ Then, the calibrator instance computes <strong>nonconformity scores</strong> (e.
 <code class="xref py py-func docutils literal notranslate"><span class="pre">deel.puncc.api.calibration.Calibrator.fit()</span></code> on the calibration dataset. Based on the estimated quantiles of nonconformity scores,
 the method <code class="xref py py-func docutils literal notranslate"><span class="pre">deel.puncc.api.calibration.BaseCalibrator.calibrate()</span></code> enables to <strong>construct</strong> and/or <strong>calibrate</strong> prediction sets.</p>
 <p>For example, the <cite>BaseCalibrator</cite> in the split conformal prediction procedure
-uses the mean absolute deviation as nonconformity score and and prediction set
+uses the mean absolute deviation as nonconformity score and prediction sets
 are built as constant intervals. These two functions are already provided in
 <code class="xref py py-func docutils literal notranslate"><span class="pre">deel.puncc.api.nonconformity_scores.mad()</span></code> and <code class="xref py py-func docutils literal notranslate"><span class="pre">deel.puncc.api.prediction_sets.constant_interval()</span></code>, respectively:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">deel.puncc.api.calibration</span> <span class="kn">import</span> <span class="n">BaseCalibrator</span>
@@ -548,19 +547,19 @@ are built as constant intervals. These two functions are already provided in
 </section>
 <section id="splitter">
 <h3><a class="toc-backref" href="#id8" role="doc-backlink">Splitter</a><a class="headerlink" href="#splitter" title="Permalink to this heading"></a></h3>
-<p>In conformal prediction, the assignement of data into fit and calibration sets is motivated by two criteria:
+<p>In conformal prediction, the assignment of data into fit and calibration sets is motivated by two criteria:
 data availability and computational resources. If quality data is abundant,
 we can split the training samples into disjoint subsets <span class="math notranslate nohighlight">\(D_{fit}\)</span> and <span class="math notranslate nohighlight">\(D_{calib}\)</span>.
 When data is scarce, a cross-validation strategy is preferred but is more
-ressource-consuming as different models are trained and nonconformity scores
+resource-consuming as different models are trained and nonconformity scores
 are computed for different disjoint folds.</p>
 <p>The two plans are implemented in <code class="xref py py-mod docutils literal notranslate"><span class="pre">deel.puncc.api.splitting</span></code> module,
 and are agnostic to the data structure (which can be ndarrays, tensors and dataframes):</p>
 <ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">deel.puncc.api.splitting.RandomSplitter</span></code>: random assignement of samples in <span class="math notranslate nohighlight">\(D_{fit}\)</span> and <span class="math notranslate nohighlight">\(D_{calib}\)</span></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">deel.puncc.api.splitting.KFoldSplitter</span></code>: random assignement of samples into K disjoint folds. Note that if K equals the size of training set, the split is identified with the leave-one-out strategy</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">deel.puncc.api.splitting.RandomSplitter</span></code>: random assignment of samples in <span class="math notranslate nohighlight">\(D_{fit}\)</span> and <span class="math notranslate nohighlight">\(D_{calib}\)</span></p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">deel.puncc.api.splitting.KFoldSplitter</span></code>: random assignment of samples into K disjoint folds. Note that if K equals the size of training set, the split is identified with the leave-one-out strategy</p></li>
 </ul>
-<p>Additionnaly, if the user already implemted a split plan, the obtained data asignement
+<p>Additionnaly, if the user already implemented a split plan, the obtained data asignement
 is wrapped in <code class="xref py py-class docutils literal notranslate"><span class="pre">deel.puncc.api.splitting.IdSplitter</span></code> to produce iterables.</p>
 <p>These methods produce <strong>iterables</strong> that are used by the <code class="xref py py-class docutils literal notranslate"><span class="pre">ConformalPredictor</span></code> instance.</p>
 </section>
