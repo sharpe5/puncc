@@ -46,27 +46,6 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="theory_overview.html">📈 Theory overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="theory_overview.html#uncertainty-quantification">Uncertainty Quantification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theory_overview.html#conformal-prediction">Conformal Prediction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theory_overview.html#conformal-regression">Conformal Regression</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#split-inductive-conformal">Split (inductive) Conformal</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="theory_overview.html#locally-adaptive-conformal-regression">Locally Adaptive Conformal Regression</a></li>
-<li class="toctree-l4"><a class="reference internal" href="theory_overview.html#conformalized-quantile-regression-cqr">Conformalized Quantile Regression (CQR)</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#cross-validation-cv-jackknife">Cross-validation+ (CV+), Jackknife+</a></li>
-<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#ensemble-batch-prediction-intervals-enbpi">Ensemble Batch Prediction Intervals (EnbPI)</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="theory_overview.html#conformal-classification">Conformal Classification</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#adaptive-prediction-sets-aps">Adaptive Prediction Sets (APS)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#regularized-adaptive-prediction-sets-raps">Regularized Adaptive Prediction Sets (RAPS)</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="theory_overview.html#references">References</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">🚀 Quickstart</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="getting_started.html#conformal-regression">Conformal Regression</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="getting_started.html#data">Data</a></li>
@@ -201,6 +180,27 @@
 <li class="toctree-l2"><a class="reference internal" href="plotting.html#plotting.plot_prediction_intervals"><code class="docutils literal notranslate"><span class="pre">plot_prediction_intervals()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="theory_overview.html">📈 Theory overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="theory_overview.html#uncertainty-quantification">Uncertainty Quantification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory_overview.html#conformal-prediction">Conformal Prediction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory_overview.html#conformal-regression">Conformal Regression</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#split-inductive-conformal">Split (inductive) Conformal</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="theory_overview.html#locally-adaptive-conformal-regression">Locally Adaptive Conformal Regression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="theory_overview.html#conformalized-quantile-regression-cqr">Conformalized Quantile Regression (CQR)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#cross-validation-cv-jackknife">Cross-validation+ (CV+), Jackknife+</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#ensemble-batch-prediction-intervals-enbpi">Ensemble Batch Prediction Intervals (EnbPI)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="theory_overview.html#conformal-classification">Conformal Classification</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#adaptive-prediction-sets-aps">Adaptive Prediction Sets (APS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#regularized-adaptive-prediction-sets-raps">Regularized Adaptive Prediction Sets (RAPS)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="theory_overview.html#references">References</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -238,7 +238,7 @@ and <code class="xref py py-func docutils literal notranslate"><span class="pre"
 compliance of models from various ML/DL libraries (such as Keras and scikit-learn) to <strong>puncc</strong>.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="deel.puncc.classification.RAPS">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deel.puncc.classification.</span></span><span class="sig-name descname"><span class="pre">RAPS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_reg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.classification.RAPS" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deel.puncc.classification.</span></span><span class="sig-name descname"><span class="pre">RAPS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_reg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.classification.RAPS" title="Permalink to this definition"></a></dt>
 <dd><p>Implementation of Regularized Adaptive Prediction Sets (RAPS).
 The hyperparameters <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(k_{reg}\)</span> are used to
 encourage small prediction sets. For more details, we refer the user to the
@@ -249,6 +249,8 @@ encourage small prediction sets. For more details, we refer the user to the
 <li><p><strong>predictor</strong> (<a class="reference internal" href="prediction.html#prediction.BasePredictor" title="prediction.BasePredictor"><em>BasePredictor</em></a>) – a predictor implementing fit and predict.</p></li>
 <li><p><strong>train</strong> (<em>bool</em>) – if False, prediction model(s) will not be trained and
 will be used as is. Defaults to True.</p></li>
+<li><p><strong>random_state</strong> (<em>float</em>) – random seed used when the user does not
+provide a custom fit/calibration split in <cite>fit</cite> method.</p></li>
 <li><p><strong>lambd</strong> (<em>float</em>) – positive weight associated to the regularization term
 that encourages small set sizes. If <span class="math notranslate nohighlight">\(\lambda = 0\)</span>, there is no
 regularization and the implementation identifies with <strong>APS</strong>.</p></li>
@@ -335,19 +337,36 @@ implementation identifies with <strong>APS</strong>.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="deel.puncc.classification.RAPS.fit">
-<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_calib</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_calib</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.classification.RAPS.fit" title="Permalink to this definition"></a></dt>
-<dd><p>This method fits the models to the fit data (X_fit, y_fit)
-and computes nonconformity scores on (X_calib, y_calib).</p>
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_fit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_fit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_calib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_calib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.classification.RAPS.fit" title="Permalink to this definition"></a></dt>
+<dd><p>This method fits the models on the fit data
+and computes nonconformity scores on calibration data.
+If (X, y) are provided, randomly split data into
+fit and calib subsets w.r.t to the fit_ratio.
+In case (X_fit, y_fit) and (X_calib, y_calib) are provided,
+the conformalization is performed on the given user defined
+fit and calibration sets.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If X and y are provided, <cite>fit</cite> ignores
+any user-defined fit/calib split.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>Iterable</em>) – features from the training dataset.</p></li>
+<li><p><strong>y</strong> (<em>Iterable</em>) – labels from the training dataset.</p></li>
+<li><p><strong>fit_ratio</strong> (<em>float</em>) – the proportion of samples assigned to the
+fit subset.</p></li>
 <li><p><strong>X_fit</strong> (<em>Iterable</em>) – features from the fit dataset.</p></li>
 <li><p><strong>y_fit</strong> (<em>Iterable</em>) – labels from the fit dataset.</p></li>
 <li><p><strong>X_calib</strong> (<em>Iterable</em>) – features from the calibration dataset.</p></li>
 <li><p><strong>y_calib</strong> (<em>Iterable</em>) – labels from the calibration dataset.</p></li>
 <li><p><strong>kwargs</strong> (<em>dict</em>) – predict configuration to be passed to the model’s
-predict method.</p></li>
+fit method.</p></li>
 </ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>RuntimeError</strong> – no dataset provided.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -461,19 +480,36 @@ will be used as is. Defaults to True.</p></li>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="deel.puncc.classification.APS.fit">
-<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_calib</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_calib</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.classification.APS.fit" title="Permalink to this definition"></a></dt>
-<dd><p>This method fits the models to the fit data (X_fit, y_fit)
-and computes nonconformity scores on (X_calib, y_calib).</p>
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_fit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_fit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_calib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_calib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.classification.APS.fit" title="Permalink to this definition"></a></dt>
+<dd><p>This method fits the models on the fit data
+and computes nonconformity scores on calibration data.
+If (X, y) are provided, randomly split data into
+fit and calib subsets w.r.t to the fit_ratio.
+In case (X_fit, y_fit) and (X_calib, y_calib) are provided,
+the conformalization is performed on the given user defined
+fit and calibration sets.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If X and y are provided, <cite>fit</cite> ignores
+any user-defined fit/calib split.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>Iterable</em>) – features from the training dataset.</p></li>
+<li><p><strong>y</strong> (<em>Iterable</em>) – labels from the training dataset.</p></li>
+<li><p><strong>fit_ratio</strong> (<em>float</em>) – the proportion of samples assigned to the
+fit subset.</p></li>
 <li><p><strong>X_fit</strong> (<em>Iterable</em>) – features from the fit dataset.</p></li>
 <li><p><strong>y_fit</strong> (<em>Iterable</em>) – labels from the fit dataset.</p></li>
 <li><p><strong>X_calib</strong> (<em>Iterable</em>) – features from the calibration dataset.</p></li>
 <li><p><strong>y_calib</strong> (<em>Iterable</em>) – labels from the calibration dataset.</p></li>
 <li><p><strong>kwargs</strong> (<em>dict</em>) – predict configuration to be passed to the model’s
-predict method.</p></li>
+fit method.</p></li>
 </ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>RuntimeError</strong> – no dataset provided.</p>
 </dd>
 </dl>
 </dd></dl>

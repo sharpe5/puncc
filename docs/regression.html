@@ -45,27 +45,6 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="theory_overview.html">📈 Theory overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="theory_overview.html#uncertainty-quantification">Uncertainty Quantification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theory_overview.html#conformal-prediction">Conformal Prediction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theory_overview.html#conformal-regression">Conformal Regression</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#split-inductive-conformal">Split (inductive) Conformal</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="theory_overview.html#locally-adaptive-conformal-regression">Locally Adaptive Conformal Regression</a></li>
-<li class="toctree-l4"><a class="reference internal" href="theory_overview.html#conformalized-quantile-regression-cqr">Conformalized Quantile Regression (CQR)</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#cross-validation-cv-jackknife">Cross-validation+ (CV+), Jackknife+</a></li>
-<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#ensemble-batch-prediction-intervals-enbpi">Ensemble Batch Prediction Intervals (EnbPI)</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="theory_overview.html#conformal-classification">Conformal Classification</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#adaptive-prediction-sets-aps">Adaptive Prediction Sets (APS)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#regularized-adaptive-prediction-sets-raps">Regularized Adaptive Prediction Sets (RAPS)</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="theory_overview.html#references">References</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">🚀 Quickstart</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="getting_started.html#conformal-regression">Conformal Regression</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="getting_started.html#data">Data</a></li>
@@ -200,6 +179,27 @@
 <li class="toctree-l2"><a class="reference internal" href="plotting.html#plotting.plot_prediction_intervals"><code class="docutils literal notranslate"><span class="pre">plot_prediction_intervals()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="theory_overview.html">📈 Theory overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="theory_overview.html#uncertainty-quantification">Uncertainty Quantification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory_overview.html#conformal-prediction">Conformal Prediction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory_overview.html#conformal-regression">Conformal Regression</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#split-inductive-conformal">Split (inductive) Conformal</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="theory_overview.html#locally-adaptive-conformal-regression">Locally Adaptive Conformal Regression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="theory_overview.html#conformalized-quantile-regression-cqr">Conformalized Quantile Regression (CQR)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#cross-validation-cv-jackknife">Cross-validation+ (CV+), Jackknife+</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#ensemble-batch-prediction-intervals-enbpi">Ensemble Batch Prediction Intervals (EnbPI)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="theory_overview.html#conformal-classification">Conformal Classification</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#adaptive-prediction-sets-aps">Adaptive Prediction Sets (APS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory_overview.html#regularized-adaptive-prediction-sets-raps">Regularized Adaptive Prediction Sets (RAPS)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="theory_overview.html#references">References</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -237,13 +237,17 @@ implement the <code class="xref py py-func docutils literal notranslate"><span c
 compliance of models from various ML/DL libraries (such as Keras and scikit-learn) to <strong>puncc</strong>.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="deel.puncc.regression.SplitCP">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deel.puncc.regression.</span></span><span class="sig-name descname"><span class="pre">SplitCP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictor</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.SplitCP" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deel.puncc.regression.</span></span><span class="sig-name descname"><span class="pre">SplitCP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictor</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.SplitCP" title="Permalink to this definition"></a></dt>
 <dd><p>Split conformal prediction method. For more details, we refer the user to
 the <a class="reference internal" href="theory_overview.html#theory-splitcp"><span class="std std-ref">theory overview page</span></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>predictor</strong> (<a class="reference internal" href="prediction.html#prediction.BasePredictor" title="prediction.BasePredictor"><em>BasePredictor</em></a>) – a predictor implementing fit and predict.</p></li>
+<li><p><strong>train</strong> (<em>bool</em>) – if False, prediction model(s) will not be (re)trained.
+Defaults to True.</p></li>
+<li><p><strong>random_state</strong> (<em>float</em>) – random seed used when the user does not
+provide a custom fit/calibration split in <cite>fit</cite> method.</p></li>
 <li><p><strong>weight_func</strong> (<em>callable</em>) – function that takes as argument an array of
 features X and returns associated “conformality” weights, defaults to
 None.</p></li>
@@ -267,13 +271,13 @@ None.</p></li>
                         <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1"># Split data into train and test</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
     <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span>
 <span class="p">)</span>
 
 <span class="c1"># Split train data into fit and calibration</span>
 <span class="n">X_fit</span><span class="p">,</span> <span class="n">X_calib</span><span class="p">,</span> <span class="n">y_fit</span><span class="p">,</span> <span class="n">y_calib</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
-    <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span>
 <span class="p">)</span>
 
 <span class="c1"># Create a random forest model and wrap it in a predictor</span>
@@ -301,19 +305,40 @@ None.</p></li>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="deel.puncc.regression.SplitCP.fit">
-<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_calib</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_calib</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.SplitCP.fit" title="Permalink to this definition"></a></dt>
-<dd><p>This method fits the models to the fit data (X_fit, y_fit)
-and computes nonconformity scores on (X_calib, y_calib).</p>
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_fit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_fit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_calib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_calib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_cached</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.SplitCP.fit" title="Permalink to this definition"></a></dt>
+<dd><p>This method fits the models on the fit data
+and computes nonconformity scores on calibration data.
+If (X, y) are provided, randomly split data into
+fit and calib subsets w.r.t to the fit_ratio.
+In case (X_fit, y_fit) and (X_calib, y_calib) are provided,
+the conformalization is performed on the given user defined
+fit and calibration sets.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If X and y are provided, <cite>fit</cite> ignores
+any user-defined fit/calib split.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>Iterable</em>) – features from the training dataset.</p></li>
+<li><p><strong>y</strong> (<em>Iterable</em>) – labels from the training dataset.</p></li>
+<li><p><strong>fit_ratio</strong> (<em>float</em>) – the proportion of samples assigned to the
+fit subset.</p></li>
 <li><p><strong>X_fit</strong> (<em>Iterable</em>) – features from the fit dataset.</p></li>
 <li><p><strong>y_fit</strong> (<em>Iterable</em>) – labels from the fit dataset.</p></li>
 <li><p><strong>X_calib</strong> (<em>Iterable</em>) – features from the calibration dataset.</p></li>
 <li><p><strong>y_calib</strong> (<em>Iterable</em>) – labels from the calibration dataset.</p></li>
+<li><p><strong>use_cached</strong> (<em>bool</em>) – if set, enables to add the previously computed
+nonconformity scores (if any) to the pool estimated in the current
+call to <cite>fit</cite>. The aggregation follows the CV+
+procedure.</p></li>
 <li><p><strong>kwargs</strong> (<em>dict</em>) – predict configuration to be passed to the model’s
-predict method.</p></li>
+fit method.</p></li>
 </ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>RuntimeError</strong> – no dataset provided.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -357,7 +382,7 @@ new samples.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="deel.puncc.regression.LocallyAdaptiveCP">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deel.puncc.regression.</span></span><span class="sig-name descname"><span class="pre">LocallyAdaptiveCP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictor</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.LocallyAdaptiveCP" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deel.puncc.regression.</span></span><span class="sig-name descname"><span class="pre">LocallyAdaptiveCP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictor</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.LocallyAdaptiveCP" title="Permalink to this definition"></a></dt>
 <dd><p>Locally adaptive conformal prediction method. For more details, we refer the user to
 the <a class="reference internal" href="theory_overview.html#theory-lacp"><span class="std std-ref">theory overview page</span></a></p>
 <dl class="field-list simple">
@@ -365,6 +390,10 @@ the <a class="reference internal" href="theory_overview.html#theory-lacp"><span 
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>predictor</strong> (<a class="reference internal" href="prediction.html#prediction.MeanVarPredictor" title="prediction.MeanVarPredictor"><em>MeanVarPredictor</em></a>) – a predictor implementing fit and predict.
 Must embed two models for point and dispersion estimations respectively.</p></li>
+<li><p><strong>train</strong> (<em>bool</em>) – if False, prediction model(s) will not be (re)trained.
+Defaults to True.</p></li>
+<li><p><strong>random_state</strong> (<em>float</em>) – random seed used when the user does not
+provide a custom fit/calibration split in <cite>fit</cite> method.</p></li>
 <li><p><strong>weight_func</strong> (<em>callable</em>) – function that takes as argument an array of
 features X and returns associated “conformality” weights, defaults to
 None.</p></li>
@@ -388,13 +417,13 @@ None.</p></li>
                         <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1"># Split data into train and test</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
     <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span>
 <span class="p">)</span>
 
 <span class="c1"># Split train data into fit and calibration</span>
 <span class="n">X_fit</span><span class="p">,</span> <span class="n">X_calib</span><span class="p">,</span> <span class="n">y_fit</span><span class="p">,</span> <span class="n">y_calib</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
-    <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span>
 <span class="p">)</span>
 
 <span class="c1"># Create two models mu (mean) and sigma (dispersion)</span>
@@ -423,19 +452,40 @@ None.</p></li>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="deel.puncc.regression.LocallyAdaptiveCP.fit">
-<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_calib</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_calib</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.LocallyAdaptiveCP.fit" title="Permalink to this definition"></a></dt>
-<dd><p>This method fits the models to the fit data (X_fit, y_fit)
-and computes nonconformity scores on (X_calib, y_calib).</p>
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_fit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_fit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_calib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_calib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_cached</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.LocallyAdaptiveCP.fit" title="Permalink to this definition"></a></dt>
+<dd><p>This method fits the models on the fit data
+and computes nonconformity scores on calibration data.
+If (X, y) are provided, randomly split data into
+fit and calib subsets w.r.t to the fit_ratio.
+In case (X_fit, y_fit) and (X_calib, y_calib) are provided,
+the conformalization is performed on the given user defined
+fit and calibration sets.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If X and y are provided, <cite>fit</cite> ignores
+any user-defined fit/calib split.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>Iterable</em>) – features from the training dataset.</p></li>
+<li><p><strong>y</strong> (<em>Iterable</em>) – labels from the training dataset.</p></li>
+<li><p><strong>fit_ratio</strong> (<em>float</em>) – the proportion of samples assigned to the
+fit subset.</p></li>
 <li><p><strong>X_fit</strong> (<em>Iterable</em>) – features from the fit dataset.</p></li>
 <li><p><strong>y_fit</strong> (<em>Iterable</em>) – labels from the fit dataset.</p></li>
 <li><p><strong>X_calib</strong> (<em>Iterable</em>) – features from the calibration dataset.</p></li>
 <li><p><strong>y_calib</strong> (<em>Iterable</em>) – labels from the calibration dataset.</p></li>
+<li><p><strong>use_cached</strong> (<em>bool</em>) – if set, enables to add the previously computed
+nonconformity scores (if any) to the pool estimated in the current
+call to <cite>fit</cite>. The aggregation follows the CV+
+procedure.</p></li>
 <li><p><strong>kwargs</strong> (<em>dict</em>) – predict configuration to be passed to the model’s
-predict method.</p></li>
+fit method.</p></li>
 </ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>RuntimeError</strong> – no dataset provided.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -479,7 +529,7 @@ new samples.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="deel.puncc.regression.CQR">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deel.puncc.regression.</span></span><span class="sig-name descname"><span class="pre">CQR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictor</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.CQR" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deel.puncc.regression.</span></span><span class="sig-name descname"><span class="pre">CQR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictor</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.CQR" title="Permalink to this definition"></a></dt>
 <dd><p>Conformalized quantile regression method. For more details, we refer the
 user to the <a class="reference internal" href="theory_overview.html#theory-cqr"><span class="std std-ref">theory overview page</span></a>.</p>
 <dl class="field-list simple">
@@ -488,6 +538,8 @@ user to the <a class="reference internal" href="theory_overview.html#theory-cqr"
 <li><p><strong>predictor</strong> (<a class="reference internal" href="prediction.html#prediction.DualPredictor" title="prediction.DualPredictor"><em>DualPredictor</em></a>) – a predictor implementing fit and predict.
 Must embed two models for lower and upper quantiles estimations
 respectively.</p></li>
+<li><p><strong>train</strong> (<em>bool</em>) – if False, prediction model(s) will not be (re)trained.
+Defaults to True.</p></li>
 <li><p><strong>weight_func</strong> (<em>callable</em>) – function that takes as argument an array of
 features X and returns associated “conformality” weights, defaults to
 None.</p></li>
@@ -511,13 +563,13 @@ None.</p></li>
             <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1"># Split data into train and test</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
     <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span>
 <span class="p">)</span>
 
 <span class="c1"># Split train data into fit and calibration</span>
 <span class="n">X_fit</span><span class="p">,</span> <span class="n">X_calib</span><span class="p">,</span> <span class="n">y_fit</span><span class="p">,</span> <span class="n">y_calib</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
-    <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span>
 <span class="p">)</span>
 
 <span class="c1"># Lower quantile regressor</span>
@@ -552,19 +604,40 @@ None.</p></li>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="deel.puncc.regression.CQR.fit">
-<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_calib</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_calib</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.CQR.fit" title="Permalink to this definition"></a></dt>
-<dd><p>This method fits the models to the fit data (X_fit, y_fit)
-and computes nonconformity scores on (X_calib, y_calib).</p>
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_fit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_fit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_calib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_calib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_cached</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.CQR.fit" title="Permalink to this definition"></a></dt>
+<dd><p>This method fits the models on the fit data
+and computes nonconformity scores on calibration data.
+If (X, y) are provided, randomly split data into
+fit and calib subsets w.r.t to the fit_ratio.
+In case (X_fit, y_fit) and (X_calib, y_calib) are provided,
+the conformalization is performed on the given user defined
+fit and calibration sets.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If X and y are provided, <cite>fit</cite> ignores
+any user-defined fit/calib split.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>Iterable</em>) – features from the training dataset.</p></li>
+<li><p><strong>y</strong> (<em>Iterable</em>) – labels from the training dataset.</p></li>
+<li><p><strong>fit_ratio</strong> (<em>float</em>) – the proportion of samples assigned to the
+fit subset.</p></li>
 <li><p><strong>X_fit</strong> (<em>Iterable</em>) – features from the fit dataset.</p></li>
 <li><p><strong>y_fit</strong> (<em>Iterable</em>) – labels from the fit dataset.</p></li>
 <li><p><strong>X_calib</strong> (<em>Iterable</em>) – features from the calibration dataset.</p></li>
 <li><p><strong>y_calib</strong> (<em>Iterable</em>) – labels from the calibration dataset.</p></li>
+<li><p><strong>use_cached</strong> (<em>bool</em>) – if set, enables to add the previously computed
+nonconformity scores (if any) to the pool estimated in the current
+call to <cite>fit</cite>. The aggregation follows the CV+
+procedure.</p></li>
 <li><p><strong>kwargs</strong> (<em>dict</em>) – predict configuration to be passed to the model’s
-predict method.</p></li>
+fit method.</p></li>
 </ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>RuntimeError</strong> – no dataset provided.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -637,7 +710,7 @@ the <a class="reference internal" href="theory_overview.html#theory-cvplus"><spa
                         <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1"># Split data into train and test</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
     <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span>
 <span class="p">)</span>
 
@@ -650,7 +723,7 @@ the <a class="reference internal" href="theory_overview.html#theory-cvplus"><spa
 
 <span class="c1"># The call to `fit` trains the model and computes the nonconformity</span>
 <span class="c1"># scores on the K-fold calibration sets</span>
-<span class="n">cv_cp</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">cv_cp</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 
 <span class="c1"># The predict method infers prediction intervals with respect to</span>
 <span class="c1"># the significance level alpha = 20%</span>
@@ -666,14 +739,18 @@ the <a class="reference internal" href="theory_overview.html#theory-cvplus"><spa
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="deel.puncc.regression.CVPlus.fit">
-<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.CVPlus.fit" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_cached</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.CVPlus.fit" title="Permalink to this definition"></a></dt>
 <dd><p>This method fits the ensemble models based on the K-fold scheme.
 The out-of-bag folds are used to computes residuals on (X_calib, y_calib).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>X_train</strong> (<em>Iterable</em>) – features from the train dataset.</p></li>
-<li><p><strong>y_train</strong> (<em>Iterable</em>) – labels from the train dataset.</p></li>
+<li><p><strong>X</strong> (<em>Iterable</em>) – features from the train dataset.</p></li>
+<li><p><strong>y</strong> (<em>Iterable</em>) – labels from the train dataset.</p></li>
+<li><p><strong>use_cached</strong> (<em>bool</em>) – if set, enables to add the previously computed
+nonconformity scores (if any) to the pool estimated in the current
+call to <cite>fit</cite>. The aggregation follows the CV+
+procedure.</p></li>
 <li><p><strong>kwargs</strong> (<em>dict</em>) – predict configuration to be passed to the model’s
 predict method.</p></li>
 </ul>
@@ -761,13 +838,13 @@ for new samples.</p>
             <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1"># Split data into train and test</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
     <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span>
 <span class="p">)</span>
 
 <span class="c1"># Split train data into fit and calibration</span>
 <span class="n">X_fit</span><span class="p">,</span> <span class="n">X_calib</span><span class="p">,</span> <span class="n">y_fit</span><span class="p">,</span> <span class="n">y_calib</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
-    <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span>
 <span class="p">)</span>
 
 <span class="c1"># Create rf regressor</span>
@@ -783,7 +860,7 @@ for new samples.</p>
 <span class="p">)</span>
 <span class="c1"># The call to `fit` trains the model and computes the nonconformity</span>
 <span class="c1"># scores on the oob calibration sets</span>
-<span class="n">enbpi</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">enbpi</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 <span class="c1"># The predict method infers prediction intervals with respect to</span>
 <span class="c1"># the significance level alpha = 20%</span>
 <span class="n">Y_pred</span><span class="p">,</span> <span class="n">y_pred_lower</span><span class="p">,</span> <span class="n">y_pred_upper</span> <span class="o">=</span> <span class="n">enbpi</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
@@ -797,14 +874,14 @@ for new samples.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="deel.puncc.regression.EnbPI.fit">
-<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.EnbPI.fit" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.EnbPI.fit" title="Permalink to this definition"></a></dt>
 <dd><p>Fit B bootstrap models on the bootstrap bags and respectively
 compute/store residuals on out-of-bag samples.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>X_train</strong> (<em>ndarray</em>) – training feature set</p></li>
-<li><p><strong>y_train</strong> (<em>ndarray</em>) – training label set</p></li>
+<li><p><strong>X</strong> (<em>ndarray</em>) – training feature set</p></li>
+<li><p><strong>y</strong> (<em>ndarray</em>) – training label set</p></li>
 <li><p><strong>kwargs</strong> (<em>dict</em>) – fit arguments for the underlying model</p></li>
 </ul>
 </dd>
@@ -884,13 +961,13 @@ residuals sequence.</p></li>
             <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1"># Split data into train and test</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
     <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span>
 <span class="p">)</span>
 
 <span class="c1"># Split train data into fit and calibration</span>
 <span class="n">X_fit</span><span class="p">,</span> <span class="n">X_calib</span><span class="p">,</span> <span class="n">y_fit</span><span class="p">,</span> <span class="n">y_calib</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
-    <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span>
 <span class="p">)</span>
 
 <span class="c1"># Create two models mu (mean) and sigma (dispersion)</span>
@@ -907,7 +984,7 @@ residuals sequence.</p></li>
 <span class="p">)</span>
 <span class="c1"># The call to `fit` trains the model and computes the nonconformity</span>
 <span class="c1"># scores on the oob calibration sets</span>
-<span class="n">aenbpi</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">aenbpi</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 <span class="c1"># The predict method infers prediction intervals with respect to</span>
 <span class="c1"># the significance level alpha = 20%</span>
 <span class="n">Y_pred</span><span class="p">,</span> <span class="n">y_pred_lower</span><span class="p">,</span> <span class="n">y_pred_upper</span> <span class="o">=</span> <span class="n">aenbpi</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
@@ -921,14 +998,14 @@ residuals sequence.</p></li>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="deel.puncc.regression.AdaptiveEnbPI.fit">
-<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.AdaptiveEnbPI.fit" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deel.puncc.regression.AdaptiveEnbPI.fit" title="Permalink to this definition"></a></dt>
 <dd><p>Fit B bootstrap models on the bootstrap bags and respectively
 compute/store residuals on out-of-bag samples.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>X_train</strong> (<em>ndarray</em>) – training feature set</p></li>
-<li><p><strong>y_train</strong> (<em>ndarray</em>) – training label set</p></li>
+<li><p><strong>X</strong> (<em>ndarray</em>) – training feature set</p></li>
+<li><p><strong>y</strong> (<em>ndarray</em>) – training label set</p></li>
 <li><p><strong>kwargs</strong> (<em>dict</em>) – fit arguments for the underlying model</p></li>
 </ul>
 </dd>
